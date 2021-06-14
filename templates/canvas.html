@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Image Object</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static', filename='styles.css')}}"
+        />
+    </head>
+    <body>
+        <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+        <h1>Image Object removal test</h1>
+        <div id="container">
+            {% if file_url %}
+            <img class="img" id="img" src="{{ file_url }}" alt="" />
+            {% endif %}
+            <canvas id="myPics"></canvas>
+        </div>
+        <button type="button" id="button">Save</button>
+        <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+
+        <!-- <a id="download" download="mask.jpg" href="">
+            
+        </a> -->
+        <!-- <input type="file" id="imagetoread" />  -->
+    </body>
+</html>
